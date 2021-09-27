@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>DOM Manipulation Example By 1960485</title>
+ <style>body{
+  align-items: center;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-top: 10%;
+}</style>
+</head>
+<body>
+ <div class="back">
+  <h1 id="parent"> Welcome to JavaScript </h1>
+ <button id="changeText">Change Text</button>
+ </div>
+ <div class="back">
+  <h3 class="color"> to know how i can talk just click me i will change my color </h3>
+ <button id="change">Change color</button>
+ </div>
+ <div class="back">
+  <p class="onclicks">Here we will see basic dom manipulations so yaa lets get started</p>
+ <button id="myBtn">Try it</button>
+ <p id="demo"></p>
+ </div>
+ 
+ <button onclick="myFunction()"> Click Me </button>
+ 
+</body>
+<script>
+ const changeT = document.getElementById("changeText");
+ changeT.addEventListener("click", () => {
+        document.querySelector("#parent").innerHTML = "Hello JavaScript";
+      });
+
+ 
+ const change = document.getElementById("change");
+      change.addEventListener("click", () => {
+        document.querySelector(".color").style.backgroundColor = "red";
+      });
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+function myFunction() {
+  var x = document.getElementsByClassName("back");
+  x[0].style.backgroundColor = "yellow";
+  x[1].style.backgroundColor = "blue";
+  x[2].style.backgroundColor = "green";
+}
+</script>
+</html>
